@@ -13,13 +13,14 @@
 		3A4749931AA9EE77001047BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4749921AA9EE77001047BE /* Images.xcassets */; };
 		3A4749961AA9EE77001047BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A4749941AA9EE77001047BE /* LaunchScreen.xib */; };
 		3A4749A21AA9EE77001047BE /* MoonRunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4749A11AA9EE77001047BE /* MoonRunnerTests.m */; };
-		3A4749BB1AA9F0A6001047BE /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4749BA1AA9F0A6001047BE /* Run.m */; };
-		3A4749BE1AA9F0A6001047BE /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4749BD1AA9F0A6001047BE /* Location.m */; };
 		3A4749C51AA9F1C4001047BE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4749C21AA9F1C4001047BE /* DetailViewController.m */; };
 		3A4749C81AA9F23F001047BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4749C71AA9F23F001047BE /* Main.storyboard */; };
 		3A4749CB1AAA08EC001047BE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4749CA1AAA08EC001047BE /* HomeViewController.m */; };
 		3A4749CE1AAA091C001047BE /* NewRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4749CD1AAA091C001047BE /* NewRunViewController.m */; };
 		3A4749D01AAA0CC5001047BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4749CF1AAA0CC5001047BE /* MapKit.framework */; };
+		3AC67A041AAA288100E4DEA6 /* MathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC67A031AAA288100E4DEA6 /* MathController.m */; };
+		3AC67A071AAA36D100E4DEA6 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC67A061AAA36D100E4DEA6 /* Location.m */; };
+		3AC67A0A1AAA36D200E4DEA6 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC67A091AAA36D200E4DEA6 /* Run.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +45,6 @@
 		3A47499B1AA9EE77001047BE /* MoonRunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonRunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4749A01AA9EE77001047BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A4749A11AA9EE77001047BE /* MoonRunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoonRunnerTests.m; sourceTree = "<group>"; };
-		3A4749B91AA9F0A6001047BE /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Run.h; path = Model/Run.h; sourceTree = "<group>"; };
-		3A4749BA1AA9F0A6001047BE /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Run.m; path = Model/Run.m; sourceTree = "<group>"; };
-		3A4749BC1AA9F0A6001047BE /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = Model/Location.h; sourceTree = "<group>"; };
-		3A4749BD1AA9F0A6001047BE /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = Model/Location.m; sourceTree = "<group>"; };
 		3A4749C11AA9F1C4001047BE /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Controller/DetailViewController.h; sourceTree = "<group>"; };
 		3A4749C21AA9F1C4001047BE /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Controller/DetailViewController.m; sourceTree = "<group>"; };
 		3A4749C71AA9F23F001047BE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +53,12 @@
 		3A4749CC1AAA091C001047BE /* NewRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewRunViewController.h; path = Controller/NewRunViewController.h; sourceTree = "<group>"; };
 		3A4749CD1AAA091C001047BE /* NewRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewRunViewController.m; path = Controller/NewRunViewController.m; sourceTree = "<group>"; };
 		3A4749CF1AAA0CC5001047BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3AC67A021AAA288100E4DEA6 /* MathController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathController.h; path = Controller/MathController.h; sourceTree = "<group>"; };
+		3AC67A031AAA288100E4DEA6 /* MathController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathController.m; path = Controller/MathController.m; sourceTree = "<group>"; };
+		3AC67A051AAA36D100E4DEA6 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		3AC67A061AAA36D100E4DEA6 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		3AC67A081AAA36D200E4DEA6 /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Run.h; sourceTree = "<group>"; };
+		3AC67A091AAA36D200E4DEA6 /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Run.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,10 +144,10 @@
 		3A4749B81AA9F06F001047BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3A4749BC1AA9F0A6001047BE /* Location.h */,
-				3A4749BD1AA9F0A6001047BE /* Location.m */,
-				3A4749B91AA9F0A6001047BE /* Run.h */,
-				3A4749BA1AA9F0A6001047BE /* Run.m */,
+				3AC67A081AAA36D200E4DEA6 /* Run.h */,
+				3AC67A091AAA36D200E4DEA6 /* Run.m */,
+				3AC67A051AAA36D100E4DEA6 /* Location.h */,
+				3AC67A061AAA36D100E4DEA6 /* Location.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -158,6 +161,8 @@
 				3A4749CD1AAA091C001047BE /* NewRunViewController.m */,
 				3A4749C11AA9F1C4001047BE /* DetailViewController.h */,
 				3A4749C21AA9F1C4001047BE /* DetailViewController.m */,
+				3AC67A021AAA288100E4DEA6 /* MathController.h */,
+				3AC67A031AAA288100E4DEA6 /* MathController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -211,6 +216,11 @@
 				TargetAttributes = {
 					3A47497B1AA9EE77001047BE = {
 						CreatedOnToolsVersion = 6.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					3A47499A1AA9EE77001047BE = {
 						CreatedOnToolsVersion = 6.0;
@@ -262,13 +272,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A4749BE1AA9F0A6001047BE /* Location.m in Sources */,
+				3AC67A0A1AAA36D200E4DEA6 /* Run.m in Sources */,
 				3A4749851AA9EE77001047BE /* AppDelegate.m in Sources */,
-				3A4749BB1AA9F0A6001047BE /* Run.m in Sources */,
+				3AC67A041AAA288100E4DEA6 /* MathController.m in Sources */,
 				3A4749881AA9EE77001047BE /* MoonRunner.xcdatamodeld in Sources */,
 				3A4749821AA9EE77001047BE /* main.m in Sources */,
 				3A4749CB1AAA08EC001047BE /* HomeViewController.m in Sources */,
 				3A4749C51AA9F1C4001047BE /* DetailViewController.m in Sources */,
+				3AC67A071AAA36D100E4DEA6 /* Location.m in Sources */,
 				3A4749CE1AAA091C001047BE /* NewRunViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +463,7 @@
 				3A4749A71AA9EE77001047BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A4749A81AA9EE77001047BE /* Build configuration list for PBXNativeTarget "MoonRunnerTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +472,7 @@
 				3A4749AA1AA9EE77001047BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

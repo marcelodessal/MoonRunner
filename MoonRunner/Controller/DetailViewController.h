@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class Run;
+#import "Run.h"
 
 @interface DetailViewController : UIViewController
 

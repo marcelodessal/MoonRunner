@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C4A3FE80-6B0D-4CA5-8FE8-7F9DB746823A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MoonRunner</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C2796D7D371295B7795AFA2CF32B416B54E80772</key>
+		<string>https://github.com/marcelodessal/MoonRunner.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MoonRunner.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C2796D7D371295B7795AFA2CF32B416B54E80772</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/marcelodessal/MoonRunner.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C2796D7D371295B7795AFA2CF32B416B54E80772</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C2796D7D371295B7795AFA2CF32B416B54E80772</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MoonRunner</string>
+		</dict>
+	</array>
+</dict>
+</plist>

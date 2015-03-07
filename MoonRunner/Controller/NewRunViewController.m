@@ -10,14 +10,13 @@
 #import "NewRunViewController.h"
 #import "DetailViewController.h"
 #import "Run.h"
-#import <CoreLocation/CoreLocation.h>
 #import "MathController.h"
 #import "Location.h"
 
 
 static NSString * const detailSegueName = @"RunDetails";
 
-@interface NewRunViewController () <UIActionSheetDelegate, CLLocationManagerDelegate>
+@interface NewRunViewController () 
 
 @property int seconds;
 @property float distance;
@@ -58,6 +57,7 @@ static NSString * const detailSegueName = @"RunDetails";
     self.distLabel.hidden = YES;
     self.paceLabel.hidden = YES;
     self.stopButton.hidden = YES;
+    self.mapView.hidden = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -82,6 +82,7 @@ static NSString * const detailSegueName = @"RunDetails";
     self.distLabel.hidden = NO;
     self.paceLabel.hidden = NO;
     self.stopButton.hidden = NO;
+    self.mapView.hidden = NO;
     
     self.seconds = 0;
     self.distance = 0;
@@ -92,6 +93,7 @@ static NSString * const detailSegueName = @"RunDetails";
 }
 
 - (IBAction)stopPressed:(id)sender {
+    [self.timer invalidate];
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"" delegate:self
                                                     cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil
                                                     otherButtonTitles:@"Save", @"Discard", nil];
@@ -142,18 +144,32 @@ static NSString * const detailSegueName = @"RunDetails";
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     for (CLLocation *newLocation in locations) {
-        if (newLocation.horizontalAccuracy < 20) {
+        
+        NSDate *eventDate = newLocation.timestamp;
+        
+        NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+        
+        if (abs(howRecent) < 10.0 && newLocation.horizontalAccuracy < 20) {
             
             // update distance
             if (self.locations.count > 0) {
                 self.distance += [newLocation distanceFromLocation:self.locations.lastObject];
+                
+                CLLocationCoordinate2D coords[2];
+                coords[0] = ((CLLocation *)self.locations.lastObject).coordinate;
+                coords[1] = newLocation.coordinate;
+                
+                MKCoordinateRegion region =
+                MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 500, 500);
+                [self.mapView setRegion:region animated:YES];
+                
+                [self.mapView addOverlay:[MKPolyline polylineWithCoordinates:coords count:2]];
             }
             
             [self.locations addObject:newLocation];
         }
     }
 }
-
 - (void)saveRun {
     Run *newRun = [NSEntityDescription insertNewObjectForEntityForName:@"Run"
                                                 inManagedObjectContext:self.managedObjectContext];
@@ -184,6 +200,21 @@ static NSString * const detailSegueName = @"RunDetails";
         abort();
     }
 }
+
+#pragma mark - MapView Delegate
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay {
+    if ([overlay isKindOfClass:[MKPolyline class]]) {
+        MKPolyline *polyLine = (MKPolyline *)overlay;
+        MKPolylineRenderer *aRenderer = [[MKPolylineRenderer alloc] initWithPolyline:polyLine];
+        aRenderer.strokeColor = [UIColor blueColor];
+        aRenderer.lineWidth = 3;
+        return aRenderer;
+    }
+    return nil;
+}
+
+
 
 #pragma mark - Navigation
 

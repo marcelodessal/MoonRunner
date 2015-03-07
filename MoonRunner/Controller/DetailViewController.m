@@ -7,13 +7,13 @@
 //
 
 #import "DetailViewController.h"
-#import <MapKit/MapKit.h>
 #import "MathController.h"
 #import "Run.h"
 #import "Location.h"
+#import "MulticolorPolylineSegment.h"
 
 
-@interface DetailViewController () <MKMapViewDelegate>
+@interface DetailViewController ()
 
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
 @property (nonatomic, weak) IBOutlet UILabel *distanceLabel;
@@ -87,10 +87,10 @@
 }
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay {
-    if ([overlay isKindOfClass:[MKPolyline class]]) {
-        MKPolyline *polyLine = (MKPolyline *)overlay;
+    if ([overlay isKindOfClass:[MulticolorPolylineSegment class]]) {
+        MulticolorPolylineSegment *polyLine = (MulticolorPolylineSegment *)overlay;
         MKPolylineRenderer *aRenderer = [[MKPolylineRenderer alloc] initWithPolyline:polyLine];
-        aRenderer.strokeColor = [UIColor blackColor];
+        aRenderer.strokeColor = polyLine.color;
         aRenderer.lineWidth = 3;
         return aRenderer;
     }
@@ -106,7 +106,6 @@
         Location *location = [self.run.locations objectAtIndex:i];
         coords[i] = CLLocationCoordinate2DMake(location.latitude.doubleValue, location.longitude.doubleValue);
     }
-    
     return [MKPolyline polylineWithCoordinates:coords count:self.run.locations.count];
 }
 
@@ -119,7 +118,8 @@
         [self.mapView setRegion:[self mapRegion]];
         
         // make the line(s!) on the map
-        [self.mapView addOverlay:[self polyLine]];
+        NSArray *colorSegmentArray = [MathController colorSegmentsForLocations:self.run.locations.array];
+        [self.mapView addOverlays:colorSegmentArray];
         
     } else {
         

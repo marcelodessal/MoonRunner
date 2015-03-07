@@ -18,6 +18,8 @@
 		3A4749CB1AAA08EC001047BE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4749CA1AAA08EC001047BE /* HomeViewController.m */; };
 		3A4749CE1AAA091C001047BE /* NewRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4749CD1AAA091C001047BE /* NewRunViewController.m */; };
 		3A4749D01AAA0CC5001047BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4749CF1AAA0CC5001047BE /* MapKit.framework */; };
+		3AB2CDF71AAB263A0042276A /* MulticolorPolylineSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB2CDF61AAB263A0042276A /* MulticolorPolylineSegment.m */; };
+		3AB2CDF91AAB2B740042276A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB2CDF81AAB2B740042276A /* Default-568h@2x.png */; };
 		3AC67A041AAA288100E4DEA6 /* MathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC67A031AAA288100E4DEA6 /* MathController.m */; };
 		3AC67A071AAA36D100E4DEA6 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC67A061AAA36D100E4DEA6 /* Location.m */; };
 		3AC67A0A1AAA36D200E4DEA6 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC67A091AAA36D200E4DEA6 /* Run.m */; };
@@ -53,6 +55,9 @@
 		3A4749CC1AAA091C001047BE /* NewRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewRunViewController.h; path = Controller/NewRunViewController.h; sourceTree = "<group>"; };
 		3A4749CD1AAA091C001047BE /* NewRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewRunViewController.m; path = Controller/NewRunViewController.m; sourceTree = "<group>"; };
 		3A4749CF1AAA0CC5001047BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3AB2CDF51AAB263A0042276A /* MulticolorPolylineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticolorPolylineSegment.h; sourceTree = "<group>"; };
+		3AB2CDF61AAB263A0042276A /* MulticolorPolylineSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulticolorPolylineSegment.m; sourceTree = "<group>"; };
+		3AB2CDF81AAB2B740042276A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		3AC67A021AAA288100E4DEA6 /* MathController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathController.h; path = Controller/MathController.h; sourceTree = "<group>"; };
 		3AC67A031AAA288100E4DEA6 /* MathController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathController.m; path = Controller/MathController.m; sourceTree = "<group>"; };
 		3AC67A051AAA36D100E4DEA6 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
@@ -108,6 +113,7 @@
 				3A4749841AA9EE77001047BE /* AppDelegate.m */,
 				3A4749C71AA9F23F001047BE /* Main.storyboard */,
 				3A4749921AA9EE77001047BE /* Images.xcassets */,
+				3AB2CDF81AAB2B740042276A /* Default-568h@2x.png */,
 				3A4749941AA9EE77001047BE /* LaunchScreen.xib */,
 				3A4749861AA9EE77001047BE /* MoonRunner.xcdatamodeld */,
 				3A47497F1AA9EE77001047BE /* Supporting Files */,
@@ -148,6 +154,8 @@
 				3AC67A091AAA36D200E4DEA6 /* Run.m */,
 				3AC67A051AAA36D100E4DEA6 /* Location.h */,
 				3AC67A061AAA36D100E4DEA6 /* Location.m */,
+				3AB2CDF51AAB263A0042276A /* MulticolorPolylineSegment.h */,
+				3AB2CDF61AAB263A0042276A /* MulticolorPolylineSegment.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -253,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A4749C81AA9F23F001047BE /* Main.storyboard in Resources */,
+				3AB2CDF91AAB2B740042276A /* Default-568h@2x.png in Resources */,
 				3A4749961AA9EE77001047BE /* LaunchScreen.xib in Resources */,
 				3A4749931AA9EE77001047BE /* Images.xcassets in Resources */,
 			);
@@ -275,6 +284,7 @@
 				3AC67A0A1AAA36D200E4DEA6 /* Run.m in Sources */,
 				3A4749851AA9EE77001047BE /* AppDelegate.m in Sources */,
 				3AC67A041AAA288100E4DEA6 /* MathController.m in Sources */,
+				3AB2CDF71AAB263A0042276A /* MulticolorPolylineSegment.m in Sources */,
 				3A4749881AA9EE77001047BE /* MoonRunner.xcdatamodeld in Sources */,
 				3A4749821AA9EE77001047BE /* main.m in Sources */,
 				3A4749CB1AAA08EC001047BE /* HomeViewController.m in Sources */,
@@ -348,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -383,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -395,8 +405,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MoonRunner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -405,8 +417,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MoonRunner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
